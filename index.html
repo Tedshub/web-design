@@ -28,37 +28,6 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
-<!-- <script>
-    function showTimeOnce() {
-      var now = new Date();
-
-      var jam = now.getHours();
-      var menit = now.getMinutes();
-      var detik = now.getSeconds();
-
-      // Tambahkan angka 0 di depan jika jam, menit, atau detik kurang dari 10
-      jam = jam < 10 ? '0' + jam : jam;
-      menit = menit < 10 ? '0' + menit : menit;
-      detik = detik < 10 ? '0' + detik : detik;
-
-      var jamString = jam + ':' + menit + ':' + detik;
-      var tanggalString = now.toDateString();
-
-      var message = 'Selamat Datang!\nJam: ' + jamString + '\nTanggal: ' + tanggalString;
-
-      // Tampilkan waktu dalam sebuah alert
-      alert(message);
-
-      // Setelah alert ditutup, hapus event click agar tidak muncul lagi
-      document.removeEventListener('click', showTimeOnce);
-    }
-
-    // Panggil fungsi showTimeOnce saat halaman dimuat
-    showTimeOnce();
-    
-    // Tambahkan event listener untuk mendeteksi klik pada halaman
-    document.addEventListener('click', showTimeOnce);
-  </script> -->
 <body>
 
   <!-- ======= Mobile nav toggle button ======= -->
@@ -72,44 +41,38 @@
         <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Tedy Firmansyah</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="mailto:tedysyhh07@gmail.com" class="email"><i class="bx bxl-gmail"></i></a>
-          <a href="https://www.facebook.com/tedy.firmansyah.790256" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="https://instagram.com/tedy.frmnsyh_" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="https://github.com/Tedshub" class="github"><i class="bx bxl-github"></i></a>
+          <a href="mailto:tedysyhh07@gmail.com" class="email" onclick="showAlert('Email')"><i class="bx bxl-gmail"></i></a>
+          <a href="https://www.facebook.com/tedy.firmansyah.790256" class="facebook" onclick="showAlert('Facebook')"><i class="bx bxl-facebook"></i></a>
+          <a href="https://instagram.com/tedy.frmnsyh_" class="instagram" onclick="showAlert('Instagram')"><i class="bx bxl-instagram"></i></a>
+          <a href="https://github.com/Tedshub" class="github" onclick="showAlert('GitHub')"><i class="bx bxl-github"></i></a>
         </div>
+      </div>
+
+      </div>
+        <script>
+          function showAlert(menuName) {
+            var confirmResponse = confirm("Apakah Anda ingin membuka halaman " + menuName + "?");
+        
+            if (!confirmResponse) {
+              // Jika pengguna memilih untuk tidak melanjutkan, Anda dapat menambahkan logika di sini atau membatalkan navigasi.
+              event.preventDefault(); // Ini akan mencegah navigasi ke halaman yang ditautkan.
+            }
+          }
+        </script>
       </div>
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="index.html" class="nav-link scrollto active" onclick="showAlert('Home')"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="about.html" class="nav-link scrollto" onclick="showAlert('About')"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="portofolio.html" class="nav-link scrollto" onclick="showAlert('Portfolio')"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="services.html" class="nav-link scrollto" onclick="showAlert('Services')"><i class="bx bx-server"></i> <span>Services</span></a></li>
-          <li><a href="contact.html" class="nav-link scrollto" onclick="showAlert('Contact')"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="index.html" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="about.html" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="portofolio.html" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a href="services.html" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+          <li><a href="contact.html" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav>
       
-      <div id="datetime"></div>
-      
-      <script>
-        function showAlert(menuName) {
-          var confirmResponse = confirm("Apakah Anda ingin melanjutkan ke menu " + menuName + "?");
-      
-          if (!confirmResponse) {
-            // Jika pengguna memilih untuk tidak melanjutkan, Anda dapat menambahkan logika di sini atau membatalkan navigasi.
-            event.preventDefault(); // Ini akan mencegah navigasi ke halaman yang ditautkan.
-          }
-        }
-      
-        function updateDateTime() {
-          var currentDateTime = new Date();
-          var dateTimeString = currentDateTime.toLocaleString();
-          document.getElementById("datetime").innerHTML = "Tanggal dan Waktu: " + dateTimeString;
-        }
-      
-        // Panggil updateDateTime setiap detik
-        setInterval(updateDateTime, 1000);
-      </script>
+      <div id="datetime">
+      </div>
     </div>
   </header>
   <!-- End Header -->
@@ -120,13 +83,9 @@
       <h1>Tedy Firmansyah</h1>
       <p>I'm <span class="typed" data-typed-items="Graphic Artist, Developer, Freelancer"></span></p>
     </div>
-  </section><!-- End Hero -->
+  </section><!-- End Hero 
 
-  <main id="main">
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
+  <!-======= Footer ======= -->
   <footer id="footer">
     <div class="container">
       <div class="copyright">
