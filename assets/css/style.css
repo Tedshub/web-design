@@ -266,6 +266,14 @@ h6 {
   background-size: cover;
 }
 
+@media (max-width: 768px) {
+  #hero {
+    background: url('../img/hero-bg-zoom.jpg') no-repeat center center/cover;
+    height: 100vh; /* Pastikan tinggi tetap diatur */
+  }
+}
+
+
 #hero:before {
   content: "";
   background: rgba(5, 13, 24, 0.3);
@@ -303,6 +311,25 @@ h6 {
   padding-bottom: 4px;
   letter-spacing: 1px;
   border-bottom: 3px solid #FEC108;
+}
+
+.btn-download-cv {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #FEC108;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-download-cv:hover {
+  background-color: #ffd700; /* Warna kuning yang lebih gelap */
+  transform: translateY(-3px);
 }
 
 @media (min-width: 1024px) {
