@@ -37,7 +37,6 @@
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="d-flex flex-column">
-
       <div class="profile">
         <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Tedy Firmansyah</a></h1>
@@ -47,21 +46,18 @@
           <a href="https://www.linkedin.com/in/tedy-firmansyah-305ab5340/" class="linkedin" onclick="showAlert('LinkedIn')"><i class="bx bxl-linkedin"></i></a>
           <a href="https://github.com/Tedshub" class="github" onclick="showAlert('GitHub')"><i class="bx bxl-github"></i></a>
         </div>
-      </div>      
-
       </div>
-        <script>
-          function showAlert(menuName) {
-            var confirmResponse = confirm("Apakah Anda ingin membuka halaman " + menuName + "?");
-        
-            if (!confirmResponse) {
-              // Jika pengguna memilih untuk tidak melanjutkan, Anda dapat menambahkan logika di sini atau membatalkan navigasi.
-              event.preventDefault(); // Ini akan mencegah navigasi ke halaman yang ditautkan.
-            }
+
+      <script>
+        function showAlert(menuName) {
+          var confirmResponse = confirm("Apakah Anda ingin membuka halaman " + menuName + "?");
+          if (!confirmResponse) {
+            event.preventDefault(); // Mencegah navigasi
           }
-        </script>
-      </div>
+        }
+      </script>
 
+      <!-- Navbar Menu -->
       <nav id="navbar" class="nav-menu navbar">
         <ul>
           <li><a href="index.html" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
@@ -71,9 +67,6 @@
           <li><a href="contact.html" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav>
-      
-      <div id="datetime">
-      </div>
     </div>
   </header><!-- End Header -->
 
@@ -91,7 +84,7 @@
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="bi bi-pencil"></i></div>
             <h4 class="title"><a href="">Vector art illustration</a></h4>
-            <p class="description">presenting extraordinary, high-quality works of visual art. Illustrate your ideas into stunning vector art illustration.</p>
+            <p class="description">Presenting extraordinary, high-quality works of visual art. Illustrate your ideas into stunning vector art illustration.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bi bi-brush"></i></div>
@@ -101,7 +94,7 @@
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
             <div class="icon"><i class="bi bi-card-checklist"></i></div>
             <h4 class="title"><a href="">Website</a></h4>
-            <p class="description">Practical solutions and innovative designs to create stunning websites With me, build your digital vision.</p>
+            <p class="description">Practical solutions and innovative designs to create stunning websites. With me, build your digital vision.</p>
           </div>
         </div>
 
@@ -119,7 +112,6 @@
       </div>
     </div>
   </footer><!-- End  Footer -->
-
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

@@ -33,10 +33,6 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
 }
 
 a {
@@ -1009,12 +1005,4 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
-}
-
-#main {
-  flex-grow: 1; /* Mengisi ruang yang tersisa agar footer tetap di bawah */
-}
-
-#footer {
-  margin-top: auto; /* Memastikan footer berada di bawah */
 }
